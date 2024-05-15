@@ -8,4 +8,12 @@ public class Node {
     public Node(Object item) {
         this.item = item;
     }
+
+    @Override
+    public String toString() {
+        if(this.next == null){
+            return "["+item+"]";
+        }
+        return "["+this.item+"]"+"->"+ next.toString();
+    }
 }
