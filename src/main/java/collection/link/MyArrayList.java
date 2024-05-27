@@ -34,13 +34,14 @@ public class MyArrayList<E> implements MyList<E> {
     }
 
     @Override
-    public void add(int index, E e) {
+    public E add(int index, E e) {
         if (size == elementData.length) {
             grow();
         }
         shiftRightFrom(index);
         elementData[index] = e;
         size++;
+        return e;
     }
 
     //요소의 마지막부터 index까지 오른쪽으로 밀기
